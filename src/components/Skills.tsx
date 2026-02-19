@@ -2,18 +2,18 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const skills = [
-  { name: "React", level: 90 },
-  { name: "Node.js", level: 85 },
+  { name: "React", level: 85 },
+  { name: "Node.js", level: 83 },
   { name: "Express.js", level: 85 },
   { name: "MongoDB", level: 80 },
-  { name: "JavaScript", level: 92 },
-  { name: "TypeScript", level: 75 },
-  { name: "HTML & CSS", level: 95 },
+  { name: "JavaScript", level: 88 },
+  { name: "HTML", level: 90 },
+  { name: "CSS", level: 90 },
   { name: "Tailwind CSS", level: 90 },
+  { name: "Bootstrap", level: 90 },
   { name: "Git & GitHub", level: 85 },
-  { name: "REST APIs", level: 88 },
-  { name: "Redux", level: 78 },
-  { name: "Next.js", level: 70 },
+  { name: "RESTful APIs APIs", level: 88 },
+  { name: "Redux", level: 75 },
 ];
 
 const Skills = () => {

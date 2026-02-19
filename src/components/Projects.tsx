@@ -1,38 +1,45 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
-
+import clothifyImg from "../assets/clothify.png";
+import ajioImg from "../assets/ajio.png";
+import quizeImg from "../assets/quize.png";
+import adminImg from "../assets/admin-panel.png";
 const projects = [
   {
-    title: "E-Commerce Platform",
-    desc: "A full-stack e-commerce app with product listings, cart, checkout, and payment integration. Built with React, Node.js, Express, and MongoDB.",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    live: "#",
-    github: "#",
+    title: "Clothify – MERN Fashion E-Commerce Platform",
+    desc: "A full-stack MERN e-commerce platform with user authentication, product and category management, shopping cart, and responsive UI. Built with React, Node.js, Express, and MongoDB.",
+    tech: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    live: "https://e-commerce-frontend-3cj.pages.dev/",
+    github: "https://github.com/MadhavRaninga/E-commerce-frontend",
+    image: clothifyImg,
     gradient: "from-primary/20 to-blue-500/20",
   },
   {
-    title: "Portfolio Website",
-    desc: "A sleek developer portfolio with animated sections, dark theme, and responsive design. Showcases projects and skills beautifully.",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
-    live: "#",
-    github: "#",
-    gradient: "from-blue-500/20 to-accent/20",
+    title: "AJIO-Clone E-Commerce",
+    desc: "A responsive fashion e-commerce frontend inspired by AJIO, featuring dynamic product listing, category filtering, shopping cart with localStorage persistence, and modern UI interactions.",
+    tech: ["HTML", "CSS", "JavaScript", "LocalStorage"],
+    live: "https://ajio-website-project-madhav.vercel.app/",
+    github: "https://github.com/MadhavRaninga/Ajio-website-project",
+    image: ajioImg,
+    gradient: "from-primary/20 to-blue-500/20",
   },
   {
-    title: "Admin Dashboard",
-    desc: "A comprehensive admin panel with data visualization, user management, analytics charts, and role-based access control.",
-    tech: ["React", "Express", "MongoDB", "Chart.js"],
-    live: "#",
-    github: "#",
+    title: "Interactive Quiz Application",
+    desc: "A dynamic quiz web application with multiple-choice questions, real-time score tracking, and instant feedback. Built with JavaScript and responsive UI for engaging learning experience.",
+    tech: ["JavaScript", "HTML", "CSS"],
+    live: "https://quiz-app-javascript-black.vercel.app/",
+    github: "https://github.com/MadhavRaninga/quiz-app-javascript",
+    image: quizeImg,
     gradient: "from-accent/20 to-primary/20",
   },
   {
-    title: "Task Manager App",
-    desc: "A productivity app with drag-and-drop task management, real-time updates, user authentication, and team collaboration features.",
-    tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-    live: "#",
-    github: "#",
+    title: "Firebase Admin Panel",
+    desc: "A web-based admin dashboard with secure authentication and real-time database management using Firebase. Features CRUD operations, protected routes, and responsive UI for managing application data.",
+    tech: ["React", "Firebase", "HTML", "CSS"],
+    live: "https://admi-panel-project-firebase.vercel.app/",
+    github: "https://github.com/MadhavRaninga/AdmiPanel-Project-Firebase",
+    image: adminImg,
     gradient: "from-primary/20 to-accent/20",
   },
 ];
@@ -64,9 +71,13 @@ const Projects = () => {
               className="glass-card rounded-2xl overflow-hidden group hover:border-primary/40 transition-all duration-500 hover:glow-primary"
             >
               {/* Image placeholder */}
-              <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-card/20 group-hover:bg-card/10 transition-all duration-500" />
-                <span className="text-6xl relative z-10 group-hover:scale-110 transition-transform duration-500">💻</span>
+              <div className="h-48 overflow-hidden relative">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60" />
               </div>
 
               <div className="p-6">

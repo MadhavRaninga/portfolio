@@ -18,9 +18,9 @@ const Footer = () => {
 
         <div className="flex items-center gap-4">
           {[
-            { icon: Github, href: "https://github.com" },
-            { icon: Linkedin, href: "https://linkedin.com" },
-            { icon: Mail, href: "mailto:madhav@example.com" },
+            { icon: Github, href: "https://github.com/MadhavRaninga", label: "GitHub" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/madhav-raninga-91a661341", label: "LinkedIn" },
+            { icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=madhavraninga3@gmail.com", label: "Email", },
           ].map((s, i) => (
             <a
               key={i}

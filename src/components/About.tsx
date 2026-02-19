@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, GraduationCap, Briefcase, Rocket } from "lucide-react";
+import { Code2, GraduationCap, Rocket } from "lucide-react";
 import profileImg from "../assets/madhav.jpeg";
 const highlights = [
-  { icon: Code2, label: "Full Stack", desc: "MERN specialist with end-to-end development expertise" },
-  { icon: GraduationCap, label: "Education", desc: "B.Tech in Computer Science & Engineering" },
-  { icon: Briefcase, label: "Experience", desc: "Built multiple production-grade web applications" },
-  { icon: Rocket, label: "Passionate", desc: "Always exploring new technologies and best practices" },
+  { icon: Code2, label: "Full Stack", desc: "MERN stack developer with end-to-end project experience" },
+  { icon: GraduationCap, label: "Education", desc: "BCA student – Computer Applications" },
+  { icon: Rocket, label: "Passionate", desc: "Always learning new technologies and best practices" },
 ];
 
 const About = () => {
@@ -55,17 +54,19 @@ const About = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             <h3 className="text-2xl font-bold mb-4 text-foreground">
-              A passionate developer building for the modern web
+              Passionate MERN Stack Developer building for the modern web
             </h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              I'm Madhav Raninga, a MERN Stack Developer with a strong focus on creating clean,
-              efficient, and user-friendly web applications. I specialize in MongoDB, Express.js,
-              React, and Node.js — the technologies that power today's most innovative platforms.
+              I'm Madhav Raninga, a MERN Stack Developer focused on building clean,
+              scalable, and user-friendly web applications. I work with MongoDB,
+              Express.js, React, and Node.js — the core technologies behind modern
+              full-stack development.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              From designing responsive front-ends to architecting robust back-end APIs, I enjoy
-              every stage of the development process. I'm constantly learning and pushing myself
-              to write better code, build better products, and deliver better experiences.
+              From crafting responsive front-end interfaces to developing secure
+              back-end APIs, I enjoy the complete development process. I'm
+              continuously learning, improving my skills, and striving to create
+              better products and digital experiences.
             </p>
 
             <div className="grid grid-cols-2 gap-4">

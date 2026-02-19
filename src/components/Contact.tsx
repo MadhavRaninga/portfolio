@@ -86,9 +86,9 @@ const Contact = () => {
           {/* Social links */}
           <div className="mt-10 pt-8 border-t border-glass-border flex items-center justify-center gap-6">
             {[
-              { icon: Github, href: "https://github.com", label: "GitHub" },
-              { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:madhav@example.com", label: "Email" },
+              { icon: Github, href: "https://github.com/MadhavRaninga", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/madhav-raninga-91a661341", label: "LinkedIn" },
+              { icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=madhavraninga3@gmail.com", label: "Email",},
             ].map((social) => (
               <a
                 key={social.label}

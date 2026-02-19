@@ -33,18 +33,26 @@ const Navbar = () => {
   }, []);
 
   const handleClick = (href: string) => {
-    setIsOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    const el = document.querySelector(href);
+    const navbar = document.querySelector("nav");
+
+    if (el && navbar) {
+      const yOffset = -navbar.offsetHeight - 10; // extra space
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+
+    setTimeout(() => setIsOpen(false), 200);
   };
+
 
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-card border-b border-glass-border shadow-lg" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass-card border-b border-glass-border shadow-lg" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#home" onClick={() => handleClick("#home")} className="text-2xl font-bold gradient-text font-mono">
@@ -57,9 +65,8 @@ const Navbar = () => {
             <button
               key={link.href}
               onClick={() => handleClick(link.href)}
-              className={`relative text-sm font-medium transition-colors duration-300 ${
-                activeSection === link.href.slice(1) ? "text-primary" : "text-muted-foreground hover:text-foreground"
-              }`}
+              className={`relative text-sm font-medium transition-colors duration-300 ${activeSection === link.href.slice(1) ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                }`}
             >
               {link.label}
               {activeSection === link.href.slice(1) && (
@@ -95,9 +102,8 @@ const Navbar = () => {
                 <button
                   key={link.href}
                   onClick={() => handleClick(link.href)}
-                  className={`text-left text-sm font-medium transition-colors ${
-                    activeSection === link.href.slice(1) ? "text-primary" : "text-muted-foreground"
-                  }`}
+                  className={`text-left text-sm font-medium transition-colors ${activeSection === link.href.slice(1) ? "text-primary" : "text-muted-foreground"
+                    }`}
                 >
                   {link.label}
                 </button>

@@ -30,17 +30,17 @@ const AnimatedRole = () => {
       timer = setTimeout(() => {
         setText(current.slice(0, text.length + 1));
       }, typingSpeed);
-    } 
+    }
     else if (!isDeleting && text.length === current.length) {
       timer = setTimeout(() => {
         setIsDeleting(true);
       }, pauseTime);
-    } 
+    }
     else if (isDeleting && text.length > 0) {
       timer = setTimeout(() => {
         setText(current.slice(0, text.length - 1));
       }, deletingSpeed);
-    } 
+    }
     else if (isDeleting && text.length === 0) {
       setIsDeleting(false);
       setRoleIndex((prev) => (prev + 1) % roles.length);
@@ -67,8 +67,9 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient pt-24 sm:pt-28 md:pt-0"
     >
+
       {/* Floating icons */}
       {floatingIcons.map((item, i) => (
         <motion.div
@@ -123,7 +124,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-muted-foreground max-w-2xl mx-auto mb-10 text-base md:text-lg"
         >
-       I build modern, scalable, and high-performance web applications using the MERN stack (MongoDB, Express, React, Node.js), transforming ideas into seamless digital experiences.
+          I build modern, scalable, and high-performance web applications using the MERN stack (MongoDB, Express, React, Node.js), transforming ideas into seamless digital experiences.
 
         </motion.p>
 
